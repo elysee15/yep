@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "typecheck": "tsc",
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/tailwind.css",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/tailwind.css"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mapbox/search-js-react": "^1.0.0-beta.14",
+    "@radix-ui/react-avatar": "^1.0.1",
+    "@reach/combobox": "^0.18.0",
+    "@remix-run/node": "^1.12.0",
+    "@remix-run/react": "^1.12.0",
+    "@remix-run/vercel": "^1.12.0",
+    "@vercel/node": "^2.6.2",
+    "class-variance-authority": "^0.4.0",
+    "mapbox-gl": "^2.12.1",
+    "react": "^18.2.0",
+    "react-aria": "^3.22.0",
+    "react-dom": "^18.2.0",
+    "react-map-gl": "^7.0.21",
+    "react-slick": "^0.29.0",
+    "react-stately": "^3.20.0",
+    "react-type-animation": "^2.1.2",
+    "remix-utils": "^6.0.0",
+    "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^1.9.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.12.0",
+    "@remix-run/eslint-config": "^1.12.0",
+    "@remix-run/serve": "^1.12.0",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "@types/react-slick": "^0.23.10",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.27.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.2",
+    "tailwindcss": "^3.2.6",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
